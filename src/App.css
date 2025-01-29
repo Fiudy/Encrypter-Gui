@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+#root {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+    align-items: center;
+}
+
+body {
+    background-color: #000000;
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.binary {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #4b5563;
+    text-shadow: 0 0 10px #4b5563;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    from {
+        top: -10%;
+    }
+    to {
+        transform: translateY(100vh);
+    }
+}
+
+.binary-number {
+    position: absolute;
+    top: -10%;
+    animation: fall 15s linear infinite;
+    color: #0f0;
+    font-size: 16px;
+    font-weight: bold;
+    vertical-align: middle;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+}
+
+input[type="file"] {
+    font-family: monospace;
+    color: white;
+}
+
+input[type="file"]::file-selector-button {
+    background-color: #374151;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-family: monospace;
+    cursor: pointer;
+}
+
+input[type="file"]::file-selector-button:hover {
+    background-color: #4b5563;
+}
+
+.logo {
+    height: 6em;
+    padding: 1.5em;
+    will-change: filter;
+    transition: filter 300ms;
+}
+
+.logo:hover {
+    filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+    filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    a:nth-of-type(2) .logo {
+        animation: logo-spin infinite 20s linear;
+    }
+}
+
+.card {
+    padding: 2em;
+}
+
+.read-the-docs {
+    color: #888;
+}

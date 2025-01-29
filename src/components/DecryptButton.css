@@ -1,0 +1,43 @@
+.decrypt-button {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  border: 1px solid #4b5563;
+  background-color: #374151;
+  padding: 0.5rem 1rem;
+  font-family: monospace;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #d1d5db;
+  transition: color 0.3s;
+}
+
+.decrypt-button:hover {
+  color: #818cf8;
+}
+
+.button-content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.button-gradient {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  transform: scale(1.25);
+  background: linear-gradient(
+    to top,
+    #818cf800 40%,
+    rgba(129, 140, 248, 1) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.decrypt-button:hover .button-gradient {
+  opacity: 1;
+}
